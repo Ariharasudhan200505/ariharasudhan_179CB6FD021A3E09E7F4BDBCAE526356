@@ -1,14 +1,23 @@
-# Default function to implement conditions to check leap year  
-def CheckLeap(Year):  
-  # Checking if the given year is leap year  
-  if((Year % 400 == 0) or  
-     (Year % 100 != 0) and  
-     (Year % 4 == 0)):   
-    print("Given Year is a leap Year");  
-  # Else it is not a leap year  
-  else:  
-    print ("Given Year is not a leap Year")  
-# Taking an input year from user  
-Year = int(input("Enter the number: "))  
-# Printing result  
-CheckLeap(Year)
+"""
+write a function called linear_search_product that takes the list of products and a target products
+name as input. the function shuuld perform a linear search to find the target pro(duct in the list and
+return a list of indices of all occurrences of the product if found,or an empty list if the product is not
+found.
+"""
+
+
+def linearsearchproduct(productlist, targetproduct):
+ indices = []
+
+ for index,product in enumerate(productlist):
+  if product == targetproduct:
+    indices.append(index)
+
+ return indices
+
+
+# example usage:
+products = ["shoes", "boot", "loafer", "shoes", "sandal", "shoes"]
+target = "shoes"
+result = linearsearchproduct(products, target)
+print(result)
